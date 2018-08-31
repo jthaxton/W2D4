@@ -19,7 +19,7 @@ end
 def two_sum?(arr, target_sum)
   sum_hash = Hash.new()
   arr.each do |el|
-    return true if sum_hash[diff = target_sum - el]
+    return true if sum_hash[target_sum - el]
     sum_hash[el] = true
   end
   false
